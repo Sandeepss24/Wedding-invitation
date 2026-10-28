@@ -449,7 +449,7 @@ export default function HeroSection({ weddingData }) {
           .hero-names-title {
             font-size: clamp(2.35rem, 7.6vw, 3.1rem) !important;
             line-height: 1.12 !important;
-            margin-bottom: 0.95rem !important;
+            margin-bottom: 1.5rem !important;
             padding: 0 0.5rem !important;
           }
           .hero-bismillah-trans {
@@ -514,7 +514,7 @@ export default function HeroSection({ weddingData }) {
           }
           .hero-names-title {
             font-size: 2.2rem !important;
-            margin-bottom: 0.75rem !important;
+            margin-bottom: 1.4rem !important;
           }
           .hero-bismillah-trans {
             font-size: 0.98rem !important;
@@ -533,7 +533,7 @@ export default function HeroSection({ weddingData }) {
             line-height: 1.42 !important;
           }
           .hero-scroll-btn {
-            margin-top: 1.1rem !important;
+            margin-top: 4.1rem !important;
           }
         }
       `}</style>
