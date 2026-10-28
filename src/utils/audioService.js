@@ -1,20 +1,20 @@
 /**
  * Audio Service for Romantic Wedding Experience
- * Uses Web Audio API for high-fidelity interactive sound effects and romantic generative ambient music.
- * Zero external audio file dependencies — guaranteed 100% offline reliability.
+ * Plays "Meeladun Saeed" by Firdhous Kaliyaroad with interactive Web Audio sound effects.
  */
 
 class WeddingAudioService {
   constructor() {
     this.ctx = null;
-    this.musicGain = null;
     this.sfxGain = null;
     this.isPlayingMusic = false;
-    this.musicTimer = null;
-    this.musicStep = 0;
+    this.bgAudio = null;
+    this.fadeInterval = null;
+    this.targetVolume = 0.65;
   }
 
   init() {
+    // 1. Web Audio Context for interactive sound effects (unwrapping, sparkles)
     if (!this.ctx) {
       const AudioCtx = window.AudioContext || window.webkitAudioContext;
       if (AudioCtx) {
@@ -22,14 +22,24 @@ class WeddingAudioService {
         this.sfxGain = this.ctx.createGain();
         this.sfxGain.gain.value = 0.5;
         this.sfxGain.connect(this.ctx.destination);
-
-        this.musicGain = this.ctx.createGain();
-        this.musicGain.gain.value = 0.25;
-        this.musicGain.connect(this.ctx.destination);
       }
     }
     if (this.ctx && this.ctx.state === "suspended") {
-      this.ctx.resume();
+      this.ctx.resume().catch(() => {});
+    }
+
+    // 2. HTML5 Audio Element for "Meeladun Saeed"
+    if (!this.bgAudio && typeof window !== "undefined") {
+      try {
+        this.bgAudio = new Audio();
+        const canPlayMp3 = this.bgAudio.canPlayType("audio/mpeg");
+        this.bgAudio.src = canPlayMp3 ? "/audio/meeladun-saeed.mp3" : "/audio/meeladun-saeed.m4a";
+        this.bgAudio.loop = true;
+        this.bgAudio.preload = "auto";
+        this.bgAudio.volume = 0;
+      } catch (e) {
+        console.warn("Could not create HTML5 audio element:", e);
+      }
     }
   }
 
@@ -152,7 +162,7 @@ class WeddingAudioService {
     this.playSparkle();
   }
 
-  // Romantic ambient acoustic piano & harp progression (C - G/B - Am7 - Fmaj7)
+  // Background Nasheed: "Meeladun Saeed"
   toggleAmbientMusic(enable) {
     if (enable) {
       this.startAmbientMusic();
@@ -165,63 +175,34 @@ class WeddingAudioService {
   startAmbientMusic() {
     try {
       this.init();
-      if (!this.ctx) return;
-      if (this.isPlayingMusic) return;
-
       this.isPlayingMusic = true;
-      this.musicStep = 0;
 
-      // Chord progressions for romantic mood
-      const chords = [
-        // Cmaj9
-        [261.63, 329.63, 392.0, 493.88, 587.33],
-        // G/B (B3, D4, G4, D5)
-        [246.94, 293.66, 392.0, 587.33],
-        // Am9 (A3, C4, E4, G4, B4)
-        [220.0, 261.63, 329.63, 392.0, 493.88],
-        // Fmaj7#11 (F3, A3, C4, E4, B4)
-        [174.61, 220.0, 261.63, 329.63, 493.88],
-      ];
+      if (this.bgAudio) {
+        if (this.fadeInterval) {
+          clearInterval(this.fadeInterval);
+        }
 
-      const playChordArpeggio = () => {
-        if (!this.isPlayingMusic || !this.ctx) return;
-
-        const chordIndex = Math.floor(this.musicStep / 4) % chords.length;
-        const currentChord = chords[chordIndex];
-        const noteIndex = this.musicStep % currentChord.length;
-        const freq = currentChord[noteIndex];
-
-        const now = this.ctx.currentTime;
-        const osc = this.ctx.createOscillator();
-        const osc2 = this.ctx.createOscillator();
-        const gain = this.ctx.createGain();
-
-        // Warm harp/piano acoustic timbre
-        osc.type = "sine";
-        osc.frequency.setValueAtTime(freq, now);
-
-        osc2.type = "triangle";
-        osc2.frequency.setValueAtTime(freq, now);
-
-        // Soft gentle envelope
-        gain.gain.setValueAtTime(0, now);
-        gain.gain.linearRampToValueAtTime(0.08, now + 0.05);
-        gain.gain.exponentialRampToValueAtTime(0.0005, now + 1.8);
-
-        osc.connect(gain);
-        osc2.connect(gain);
-        gain.connect(this.musicGain);
-
-        osc.start(now);
-        osc2.start(now);
-        osc.stop(now + 1.9);
-        osc2.stop(now + 1.9);
-
-        this.musicStep++;
-        this.musicTimer = setTimeout(playChordArpeggio, 580);
-      };
-
-      playChordArpeggio();
+        const playPromise = this.bgAudio.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              // Smooth volume ramp-up to target volume
+              let currentVol = this.bgAudio.volume;
+              this.fadeInterval = setInterval(() => {
+                if (currentVol < this.targetVolume) {
+                  currentVol = Math.min(this.targetVolume, currentVol + 0.05);
+                  if (this.bgAudio) this.bgAudio.volume = currentVol;
+                } else {
+                  clearInterval(this.fadeInterval);
+                  this.fadeInterval = null;
+                }
+              }, 50);
+            })
+            .catch((err) => {
+              console.warn("Background audio play error or user gesture required:", err);
+            });
+        }
+      }
     } catch (err) {
       console.warn("Ambient music error:", err);
     }
@@ -229,15 +210,34 @@ class WeddingAudioService {
 
   stopAmbientMusic() {
     this.isPlayingMusic = false;
-    if (this.musicTimer) {
-      clearTimeout(this.musicTimer);
-      this.musicTimer = null;
+    if (this.fadeInterval) {
+      clearInterval(this.fadeInterval);
+      this.fadeInterval = null;
+    }
+
+    if (this.bgAudio) {
+      let currentVol = this.bgAudio.volume;
+      this.fadeInterval = setInterval(() => {
+        if (currentVol > 0.05) {
+          currentVol = Math.max(0, currentVol - 0.08);
+          if (this.bgAudio) this.bgAudio.volume = currentVol;
+        } else {
+          clearInterval(this.fadeInterval);
+          this.fadeInterval = null;
+          if (this.bgAudio) {
+            this.bgAudio.pause();
+            this.bgAudio.volume = 0;
+          }
+        }
+      }, 40);
     }
   }
 
   setVolume(val) {
-    if (this.musicGain) {
-      this.musicGain.gain.value = Math.max(0, Math.min(1, val));
+    const clamped = Math.max(0, Math.min(1, val));
+    this.targetVolume = clamped;
+    if (this.bgAudio && this.isPlayingMusic) {
+      this.bgAudio.volume = clamped;
     }
   }
 }

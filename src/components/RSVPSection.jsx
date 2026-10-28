@@ -432,7 +432,7 @@ export default function RSVPSection({ weddingData }) {
                       marginBottom: "1.5rem",
                     }}
                   >
-                    "Even though you cannot be with us in person, your thoughtful prayers, warm blessings, and love mean the world to Mohammed Nishad & Jumeena. You will always be in our hearts and prayers!"
+                    "Even though you cannot be with us in person, your thoughtful prayers, warm blessings, and love mean the world to Nishad & Jumeena. You will always be in our hearts and prayers!"
                   </p>
 
                   <p

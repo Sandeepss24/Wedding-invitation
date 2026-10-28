@@ -91,7 +91,7 @@ export default function AudioPlayer({ weddingData, soundEnabled, setSoundEnabled
                 color: "var(--color-muted)",
               }}
             >
-              {soundEnabled ? "Playing romantic ambient harp" : "Sound muted"}
+              {soundEnabled ? (weddingData.music?.artist ? `Playing: ${weddingData.music.artist}` : "Playing Nasheed") : "Sound muted"}
             </div>
           </div>
         )}

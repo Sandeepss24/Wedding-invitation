@@ -634,7 +634,7 @@ export default function InvitationCardSection({ weddingData }) {
 
             <div style={{ marginTop: "1rem", color: "#FFF", textAlign: "center" }}>
               <p style={{ fontFamily: "var(--font-serif-classic)", fontStyle: "italic", fontSize: "1.05rem" }}>
-                Mohammed Nishad &amp; Jumeena • Sunday, November 22, 2026
+                Jumeena &amp; Nishad • Sunday, November 22, 2026
               </p>
             </div>
           </motion.div>

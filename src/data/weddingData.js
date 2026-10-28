@@ -14,9 +14,9 @@ export const weddingData = {
 
   couple: {
     groom: {
-      name: "Mohammed Nishad",
+      name: "Nishad",
       shortName: "Nishad",
-      fullName: "Mohammed Nishad",
+      fullName: "Nishad",
       parents: "Mr. Muhammed Nizar C M & Mrs. Shaffeera K M",
       house: "Thekkeveettil Parambil House",
       post: "Nettoor P O, Maradu, Ernakulam",
@@ -31,7 +31,7 @@ export const weddingData = {
       post: "Madavana, Panangad P O, Ernakulam",
       initial: "J",
     },
-    namesCombined: "Jumeena & Mohammed Nishad",
+    namesCombined: "Jumeena & Nishad",
     namesShort: "Jumeena & Nishad",
     monogram: "J & N",
     hashtag: "#NishadWedsJumeena",
@@ -159,7 +159,7 @@ export const weddingData = {
     {
       id: 1,
       title: "Walking Hand In Hand",
-      caption: "Mohammed Nishad & Jumeena walking together in royal traditional attire, sharing quiet smiles.",
+      caption: "Nishad & Jumeena walking together in royal traditional attire, sharing quiet smiles.",
       image: "/images/wedding-2.jpg",
       category: "Portraits",
       aspect: "portrait",
@@ -220,7 +220,7 @@ export const weddingData = {
     invitationPlea:
       "We cordially invite your esteemed presence with family on the auspicious occasion of the marriage of our beloved daughter",
     brideName: "Jumeena",
-    groomName: "Mohammed Nishad",
+    groomName: "Nishad",
     parentsGroom: "Mr. Muhammed Nizar C M & Mrs. Shaffeera K M",
     parentsGroomHouse: "Thekkeveettil Parambil House, Nettoor P O, Maradu, Ernakulam",
     nikkahTime: "Nikkah: 11:00 AM",
@@ -236,8 +236,9 @@ export const weddingData = {
   },
 
   music: {
-    title: "Mawlaya & Kun Anta — Romantic Acoustic Oud, Strings & Piano",
-    artist: "Nishad & Jumeena's Wedding Theme",
+    title: "Meeladun Saeed",
+    artist: "Firdhous Kaliyaroad",
+    src: "/audio/meeladun-saeed.mp3",
   },
 };
 
