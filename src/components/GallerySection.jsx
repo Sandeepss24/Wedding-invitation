@@ -92,12 +92,12 @@ export default function GallerySection({ weddingData }) {
                 padding: "0.5rem 1.4rem",
                 borderRadius: "30px",
                 border: "1px solid var(--color-gold)",
-                background: "linear-gradient(135deg, rgba(13, 68, 51, 0.08) 0%, rgba(197, 160, 89, 0.15) 100%)",
-                color: "var(--color-emerald)",
+                background: "linear-gradient(135deg, rgba(112, 31, 43, 0.08) 0%, rgba(197, 160, 89, 0.15) 100%)",
+                color: "var(--color-burgundy)",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                boxShadow: "0 2px 10px rgba(13, 68, 51, 0.05)",
+                boxShadow: "0 2px 10px rgba(112, 31, 43, 0.05)",
               }}
             >
               <Heart size={14} color="var(--color-gold)" fill="var(--color-gold)" />
@@ -150,7 +150,7 @@ export default function GallerySection({ weddingData }) {
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "linear-gradient(to top, rgba(13, 68, 51, 0.88) 0%, rgba(13, 68, 51, 0.2) 60%, transparent 100%)",
+                    background: "linear-gradient(to top, rgba(112, 31, 43, 0.88) 0%, rgba(112, 31, 43, 0.2) 60%, transparent 100%)",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "flex-end",
@@ -240,7 +240,7 @@ export default function GallerySection({ weddingData }) {
           }
           .gallery-overlay {
             opacity: 1 !important;
-            background: linear-gradient(to top, rgba(13, 68, 51, 0.85) 0%, transparent 60%) !important;
+            background: linear-gradient(to top, rgba(112, 31, 43, 0.85) 0%, transparent 60%) !important;
           }
         }
       `}</style>

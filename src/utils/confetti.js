@@ -1,8 +1,8 @@
 import confetti from "canvas-confetti";
 
 export const fireGiftBoxConfetti = () => {
-  // Golden sparkles, champagne flakes, and warm blush confetti
-  const colors = ["#D4AF37", "#F7E7CE", "#E8A598", "#8B263E", "#FFFFFF", "#F3C68F"];
+  // Burgundy, cream, and golden sparkles confetti
+  const colors = ["#701F2B", "#912E3B", "#F8F0E3", "#D4AF37", "#FFFFFF", "#ECC880"];
 
   // Center upward explosion
   confetti({
@@ -42,7 +42,7 @@ export const fireGiftBoxConfetti = () => {
 };
 
 export const fireRSVPConfetti = () => {
-  const colors = ["#8B263E", "#D4AF37", "#F7E7CE", "#E8A598", "#C5A059"];
+  const colors = ["#701F2B", "#912E3B", "#F8F0E3", "#D4AF37", "#ECC880", "#FFFFFF"];
 
   confetti({
     particleCount: 100,

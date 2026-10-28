@@ -139,7 +139,7 @@ export default function GiftBoxOpening({ weddingData, onOpenComplete, soundEnabl
                 <div className="bow-loop-left" />
                 <div className="bow-loop-right" />
                 <div className="bow-center-brooch">
-                  {weddingData.couple.groom.initial}&amp;{weddingData.couple.bride.initial}
+                  {weddingData.couple.bride.initial}&amp;{weddingData.couple.groom.initial}
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@ export default function GiftBoxOpening({ weddingData, onOpenComplete, soundEnabl
 
       {/* Bottom Hint and CTA */}
       <div className="gift-text-bottom">
-        <p className="gift-hint-tag">Tap to reveal the blessed wedding invitation of Nishad &amp; Jumeena.</p>
+        <p className="gift-hint-tag">Tap to reveal the blessed wedding invitation of Jumeena &amp; Nishad.</p>
         <button
           type="button"
           onClick={handleUnwrap}

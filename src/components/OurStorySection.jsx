@@ -256,7 +256,7 @@ export default function OurStorySection({ weddingData }) {
             style={{
               fontFamily: "var(--font-arabic)",
               fontSize: "clamp(1.4rem, 2.8vw, 1.9rem)",
-              color: "var(--color-emerald)",
+              color: "var(--color-burgundy)",
               direction: "rtl",
               marginBottom: "1.2rem",
               lineHeight: 1.6,

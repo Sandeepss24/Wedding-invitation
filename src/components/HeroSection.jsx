@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, ChevronDown, Sparkles, Heart } from "lucide-react";
+import RosePetals from "./RosePetals";
 
 export default function HeroSection({ weddingData }) {
   const { couple, schedule, venue } = weddingData;
@@ -14,7 +15,7 @@ export default function HeroSection({ weddingData }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "7rem 1.5rem 4rem",
+        padding: "5rem 1.5rem 4rem",
         overflow: "hidden",
       }}
     >
@@ -46,6 +47,9 @@ export default function HeroSection({ weddingData }) {
         }}
       />
 
+      {/* Ambient Falling Rose Petals Animation */}
+      <RosePetals count={22} />
+
       {/* Floating Sparkles & Petals */}
       <div className="sparkle-particle" style={{ top: "15%", left: "10%" }}>
         <Sparkles size={16} color="var(--color-gold)" />
@@ -66,143 +70,219 @@ export default function HeroSection({ weddingData }) {
           textAlign: "center",
         }}
       >
-        {/* Sacred Bismillah Calligraphy */}
+        {/* Sacred Bismillah Calligraphy in Gold */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          style={{ marginBottom: "0.8rem" }}
+          transition={{ duration: 0.8, delay: 0.15 }}
+          style={{ marginBottom: "0.6rem" }}
         >
           <div className="bismillah-calligraphy-gold">
             {weddingData.bismillah?.arabic || "بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"}
           </div>
+        </motion.div>
+
+        {/* Subtitle Tagline: — NIKAH INVITATION — */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.25 }}
+          style={{ marginBottom: "1.2rem" }}
+        >
           <div
             style={{
-              fontFamily: "var(--font-serif-classic)",
-              fontStyle: "italic",
-              fontSize: "0.98rem",
-              color: "var(--color-muted)",
-              letterSpacing: "0.04em",
-              marginBottom: "1.2rem",
+              fontFamily: "var(--font-modern)",
+              fontSize: "clamp(0.78rem, 1.8vw, 0.88rem)",
+              fontWeight: 600,
+              letterSpacing: "0.28em",
+              color: "var(--color-burgundy)",
+              textTransform: "uppercase",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.65rem",
             }}
           >
-            In the name of Allah, the Most Gracious, the Most Merciful
+            <span style={{ color: "var(--color-gold)", opacity: 0.85 }}>—</span>
+            <span>{couple.announcementHeading || "NIKAH INVITATION"}</span>
+            <span style={{ color: "var(--color-gold)", opacity: 0.85 }}>—</span>
           </div>
         </motion.div>
 
-        {/* Subtle Announcement Pill */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          style={{ marginBottom: "1.2rem" }}
-        >
-          <span
-            className="tag-pill"
-            style={{
-              padding: "0.5rem 1.4rem",
-              fontSize: "0.82rem",
-              letterSpacing: "0.22em",
-              borderRadius: "30px",
-              background: "rgba(255, 255, 255, 0.92)",
-              border: "1px solid rgba(197, 160, 89, 0.4)",
-              boxShadow: "0 4px 15px rgba(13, 68, 51, 0.06)",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-            }}
-          >
-            <Sparkles size={13} color="var(--color-gold)" />
-            {couple.announcementHeading}
-            <Sparkles size={13} color="var(--color-gold)" />
-          </span>
-        </motion.div>
-
-        {/* Couple Names Headline */}
+        {/* Grand Couple Names Headline */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.4 }}
+          transition={{ duration: 0.9, delay: 0.35 }}
           style={{
             fontFamily: "var(--font-serif-display)",
-            fontSize: "clamp(2.3rem, 6.5vw, 5.5rem)",
+            fontSize: "clamp(2.8rem, 7.5vw, 5.8rem)",
             fontWeight: 500,
-            lineHeight: 1.15,
+            lineHeight: 1.1,
             letterSpacing: "-0.01em",
             color: "var(--color-charcoal)",
-            marginBottom: "0.8rem",
+            marginBottom: "1.4rem",
             padding: "0 0.5rem",
           }}
         >
-          <span className="text-gold-gradient">{couple.groom.shortName || couple.groom.name}</span>
-          <span style={{ fontFamily: "var(--font-script)", fontSize: "0.9em", color: "var(--color-emerald)", margin: "0 0.35rem" }}>
+          <span>{couple.bride.name || couple.bride.shortName}</span>
+          <span
+            style={{
+              fontFamily: "var(--font-serif-classic)",
+              fontStyle: "italic",
+              fontSize: "0.85em",
+              color: "var(--color-gold)",
+              margin: "0 0.45rem",
+              fontWeight: 400,
+              display: "inline-block",
+            }}
+          >
             &amp;
           </span>
-          <span className="text-gold-gradient">{couple.bride.name}</span>
+          <span>{couple.groom.shortName || couple.groom.name}</span>
         </motion.h1>
 
-        {/* Romantic Subtitle */}
+        {/* English Bismillah */}
         <motion.p
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.45 }}
           style={{
             fontFamily: "var(--font-serif-classic)",
             fontStyle: "italic",
-            fontSize: "clamp(1.05rem, 2.2vw, 1.45rem)",
-            color: "var(--color-muted)",
-            maxWidth: "680px",
-            margin: "0 auto 1.5rem",
-            lineHeight: 1.5,
-            padding: "0 0.5rem",
+            fontSize: "clamp(1.1rem, 2.3vw, 1.35rem)",
+            color: "var(--color-charcoal)",
+            opacity: 0.9,
+            marginBottom: "1.1rem",
+            letterSpacing: "0.01em",
           }}
         >
-          "{couple.subtitle}"
+          {weddingData.bismillah?.english || "In the name of Allah, the Most Gracious, the Most Merciful"}
         </motion.p>
 
-        {/* Blessed Dua Box */}
-        {couple.duaArabic && (
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.65 }}
+        {/* Delicate Golden Divider Dash */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: "1.5rem",
+          }}
+        >
+          <span
             style={{
-              background: "rgba(233, 244, 238, 0.75)",
-              border: "1px solid rgba(197, 160, 89, 0.35)",
-              borderRadius: "18px",
-              padding: "0.85rem 1.2rem",
-              maxWidth: "620px",
-              margin: "0 auto 2.2rem",
-              boxShadow: "0 4px 15px rgba(13, 68, 51, 0.05)",
+              fontFamily: "var(--font-serif-classic)",
+              fontSize: "1.6rem",
+              lineHeight: 1,
+              color: "var(--color-gold)",
+              opacity: 0.75,
             }}
           >
-            <div
-              style={{
-                fontFamily: "var(--font-arabic)",
-                fontSize: "clamp(1.15rem, 3.2vw, 1.35rem)",
-                color: "var(--color-emerald)",
-                direction: "rtl",
-                marginBottom: "0.25rem",
-              }}
-            >
-              {couple.duaArabic}
-            </div>
-            <div
+            —
+          </span>
+        </motion.div>
+
+        {/* Main Invitation Plea & Closing Paragraphs */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.55 }}
+          style={{
+            maxWidth: "700px",
+            margin: "0 auto 2.8rem",
+            padding: "0 1rem",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-serif-classic)",
+              fontStyle: "italic",
+              fontSize: "clamp(1.22rem, 2.6vw, 1.58rem)",
+              color: "var(--color-charcoal)",
+              lineHeight: 1.65,
+              marginBottom: "1.1rem",
+            }}
+          >
+            With the blessings of Almighty Allah and of our beloved families,{" "}
+            <span style={{ fontWeight: 600, color: "var(--color-charcoal)" }}>
+              {couple.bride.name || couple.bride.shortName}
+            </span>{" "}
+            <span
               style={{
                 fontFamily: "var(--font-serif-classic)",
                 fontStyle: "italic",
-                fontSize: "0.9rem",
-                color: "var(--color-muted)",
-                lineHeight: 1.4,
+                color: "var(--color-gold)",
+                margin: "0 0.15rem",
               }}
             >
-              "{couple.duaTranslation}"
-            </div>
-          </motion.div>
-        )}
+              &amp;
+            </span>{" "}
+            <span style={{ fontWeight: 600, color: "var(--color-charcoal)" }}>
+              {couple.groom.shortName || couple.groom.name}
+            </span>{" "}
+            invite you to the Nikah that joins them in marriage.
+          </p>
+
+          <p
+            style={{
+              fontFamily: "var(--font-serif-classic)",
+              fontStyle: "italic",
+              fontSize: "clamp(1.12rem, 2.4vw, 1.4rem)",
+              color: "var(--color-charcoal)",
+              opacity: 0.88,
+              lineHeight: 1.55,
+            }}
+          >
+            {couple.invitationClosing || "Your presence and your du'a would make our day complete."}
+          </p>
+
+          {/* Scroll Down Button */}
+          <motion.a
+            href="#hero-photo"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("hero-photo");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.65 }}
+            style={{
+              display: "inline-flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "0.25rem",
+              color: "var(--color-muted)",
+              textDecoration: "none",
+              fontFamily: "var(--font-modern)",
+              fontSize: "0.75rem",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              cursor: "pointer",
+              marginTop: "1.6rem",
+              transition: "color 0.3s ease",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-burgundy)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-muted)")}
+            aria-label="Scroll down to wedding celebration details"
+          >
+            <span>Scroll To Explore</span>
+            <motion.div
+              animate={{ y: [0, 5, 0] }}
+              transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <ChevronDown size={19} color="var(--color-burgundy)" />
+            </motion.div>
+          </motion.a>
+        </motion.div>
 
         {/* Editorial Photo Frame with Arch & Gold Trim */}
         <motion.div
+          id="hero-photo"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7 }}
@@ -212,10 +292,11 @@ export default function HeroSection({ weddingData }) {
             maxWidth: "880px",
             borderRadius: "32px 32px 24px 24px",
             overflow: "hidden",
-            boxShadow: "0 25px 60px -15px rgba(13, 68, 51, 0.22), 0 0 30px rgba(197, 160, 89, 0.2)",
+            boxShadow: "0 25px 60px -15px rgba(112, 31, 43, 0.22), 0 0 30px rgba(197, 160, 89, 0.2)",
             border: "1px solid rgba(197, 160, 89, 0.35)",
             background: "#FFFDF9",
             padding: "8px",
+            scrollMarginTop: "5rem",
           }}
         >
           <div
@@ -246,7 +327,7 @@ export default function HeroSection({ weddingData }) {
               style={{
                 position: "absolute",
                 inset: 0,
-                background: "linear-gradient(to top, rgba(13, 68, 51, 0.85) 0%, rgba(13, 68, 51, 0.2) 45%, transparent 75%)",
+                background: "linear-gradient(to top, rgba(112, 31, 43, 0.88) 0%, rgba(112, 31, 43, 0.22) 45%, transparent 75%)",
                 pointerEvents: "none",
               }}
             />
@@ -306,45 +387,19 @@ export default function HeroSection({ weddingData }) {
             </div>
           </div>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.a
-          href="#story"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
-          style={{
-            marginTop: "2.5rem",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "0.3rem",
-            color: "var(--color-muted)",
-            textDecoration: "none",
-            fontFamily: "var(--font-modern)",
-            fontSize: "0.78rem",
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            cursor: "pointer",
-          }}
-        >
-          <span>Scroll To Explore</span>
-          <motion.div
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ChevronDown size={18} color="var(--color-burgundy)" />
-          </motion.div>
-        </motion.a>
       </div>
 
       <style>{`
         @media (max-width: 640px) {
+          #hero {
+            padding-top: 5.2rem !important;
+            padding-bottom: 3rem !important;
+          }
           .hero-bottom-ribbon {
             padding: 1rem !important;
             flex-direction: column !important;
             align-items: flex-start !important;
-            background: rgba(7, 41, 31, 0.75);
+            background: rgba(74, 18, 26, 0.85);
             backdrop-filter: blur(8px);
           }
           .hero-bottom-ribbon .btn-gold {

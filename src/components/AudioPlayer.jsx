@@ -29,7 +29,7 @@ export default function AudioPlayer({ weddingData, soundEnabled, setSoundEnabled
           display: "flex",
           alignItems: "center",
           gap: "0.75rem",
-          boxShadow: "0 8px 25px rgba(109, 27, 46, 0.12)",
+          boxShadow: "0 8px 25px rgba(112, 31, 43, 0.12)",
           border: "1px solid rgba(197, 160, 89, 0.35)",
           transition: "all 0.3s ease",
         }}
@@ -53,7 +53,7 @@ export default function AudioPlayer({ weddingData, soundEnabled, setSoundEnabled
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            boxShadow: soundEnabled ? "0 4px 12px rgba(109, 27, 46, 0.3)" : "none",
+            boxShadow: soundEnabled ? "0 4px 12px rgba(112, 31, 43, 0.3)" : "none",
             transition: "all 0.3s ease",
           }}
           aria-label={soundEnabled ? "Mute romantic music" : "Play romantic music"}

@@ -47,7 +47,7 @@ export default function Navbar({ weddingData, onReplayGiftBox, soundEnabled, set
         backgroundColor: scrolled ? "rgba(253, 251, 247, 0.92)" : "transparent",
         backdropFilter: scrolled ? "blur(14px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(14px)" : "none",
-        boxShadow: scrolled ? "0 4px 20px rgba(109, 27, 46, 0.06)" : "none",
+        boxShadow: scrolled ? "0 4px 20px rgba(112, 31, 43, 0.06)" : "none",
         borderBottom: scrolled ? "1px solid rgba(197, 160, 89, 0.2)" : "transparent",
       }}
     >
@@ -225,7 +225,7 @@ export default function Navbar({ weddingData, onReplayGiftBox, soundEnabled, set
             display: "flex",
             flexDirection: "column",
             gap: "1.2rem",
-            boxShadow: "0 10px 25px rgba(109, 27, 46, 0.1)",
+            boxShadow: "0 10px 25px rgba(112, 31, 43, 0.1)",
           }}
         >
           {navLinks.map((link) => (

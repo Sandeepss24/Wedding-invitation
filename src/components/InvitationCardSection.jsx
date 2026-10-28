@@ -86,7 +86,7 @@ export default function InvitationCardSection({ weddingData }) {
               borderRadius: "40px",
               padding: "4px",
               marginTop: "1.8rem",
-              boxShadow: "0 4px 15px rgba(13, 68, 51, 0.06)",
+              boxShadow: "0 4px 15px rgba(112, 31, 43, 0.06)",
             }}
           >
             <button
@@ -101,7 +101,7 @@ export default function InvitationCardSection({ weddingData }) {
                 border: "none",
                 cursor: "pointer",
                 transition: "all 0.25s ease",
-                background: viewMode === "card" ? "var(--color-emerald)" : "transparent",
+                background: viewMode === "card" ? "var(--color-burgundy)" : "transparent",
                 color: viewMode === "card" ? "#FFF" : "var(--color-charcoal)",
               }}
             >
@@ -119,7 +119,7 @@ export default function InvitationCardSection({ weddingData }) {
                 border: "none",
                 cursor: "pointer",
                 transition: "all 0.25s ease",
-                background: viewMode === "digital" ? "var(--color-emerald)" : "transparent",
+                background: viewMode === "digital" ? "var(--color-burgundy)" : "transparent",
                 color: viewMode === "digital" ? "#FFF" : "var(--color-charcoal)",
               }}
             >
@@ -141,7 +141,7 @@ export default function InvitationCardSection({ weddingData }) {
               maxWidth: "580px",
               borderRadius: "24px",
               overflow: "hidden",
-              boxShadow: "0 25px 60px -15px rgba(13, 68, 51, 0.22), 0 0 30px rgba(197, 160, 89, 0.25)",
+              boxShadow: "0 25px 60px -15px rgba(112, 31, 43, 0.22), 0 0 30px rgba(197, 160, 89, 0.25)",
               border: "2px solid rgba(197, 160, 89, 0.45)",
               background: "#FFFDF9",
               padding: "10px",
@@ -178,7 +178,7 @@ export default function InvitationCardSection({ weddingData }) {
                   position: "absolute",
                   bottom: "16px",
                   right: "16px",
-                  background: "rgba(13, 68, 51, 0.9)",
+                  background: "rgba(112, 31, 43, 0.9)",
                   backdropFilter: "blur(6px)",
                   color: "#FFF",
                   padding: "0.45rem 0.95rem",
@@ -215,7 +215,7 @@ export default function InvitationCardSection({ weddingData }) {
               backgroundColor: "#FFFDF9",
               borderRadius: "24px",
               padding: "clamp(2.5rem, 5vw, 4.5rem) clamp(1.4rem, 4vw, 3.5rem)",
-              boxShadow: "0 25px 60px -15px rgba(13, 68, 51, 0.18), 0 0 30px rgba(197, 160, 89, 0.18)",
+              boxShadow: "0 25px 60px -15px rgba(112, 31, 43, 0.18), 0 0 30px rgba(197, 160, 89, 0.18)",
               border: "1px solid rgba(197, 160, 89, 0.35)",
               textAlign: "center",
             }}
@@ -250,8 +250,8 @@ export default function InvitationCardSection({ weddingData }) {
                 width: "56px",
                 height: "56px",
                 borderRadius: "50%",
-                background: "radial-gradient(circle at 35% 35%, #185E48 0%, #0D4433 70%, #062319 100%)",
-                boxShadow: "0 6px 18px rgba(13, 68, 51, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.35)",
+                background: "radial-gradient(circle at 35% 35%, #912E3B 0%, #701F2B 70%, #4A121A 100%)",
+                boxShadow: "0 6px 18px rgba(112, 31, 43, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.35)",
                 border: "2px solid rgba(255, 255, 255, 0.5)",
                 display: "flex",
                 alignItems: "center",
@@ -269,7 +269,7 @@ export default function InvitationCardSection({ weddingData }) {
                   textShadow: "0 1px 2px rgba(0,0,0,0.5)",
                 }}
               >
-                {couple.groom.initial}&amp;{couple.bride.initial}
+                {couple.bride.initial}&amp;{couple.groom.initial}
               </span>
             </div>
 
@@ -281,7 +281,7 @@ export default function InvitationCardSection({ weddingData }) {
                   style={{
                     fontFamily: "var(--font-arabic)",
                     fontSize: "clamp(1.8rem, 3.8vw, 2.4rem)",
-                    color: "var(--color-emerald)",
+                    color: "var(--color-burgundy)",
                     direction: "rtl",
                     lineHeight: 1.3,
                   }}
@@ -400,10 +400,10 @@ export default function InvitationCardSection({ weddingData }) {
                     fontSize: "0.82rem",
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
-                    color: "var(--color-emerald)",
+                    color: "var(--color-burgundy)",
                     fontWeight: 600,
                     padding: "0.25rem 0.85rem",
-                    background: "rgba(233, 244, 238, 0.7)",
+                    background: "rgba(248, 240, 227, 0.85)",
                     borderRadius: "20px",
                     border: "1px solid rgba(197, 160, 89, 0.3)",
                   }}
@@ -417,7 +417,7 @@ export default function InvitationCardSection({ weddingData }) {
                 style={{
                   margin: "1.4rem auto",
                   padding: "1.2rem 1.4rem",
-                  background: "linear-gradient(135deg, rgba(233, 244, 238, 0.6) 0%, rgba(245, 232, 211, 0.3) 100%)",
+                  background: "linear-gradient(135deg, rgba(248, 240, 227, 0.75) 0%, rgba(245, 232, 211, 0.35) 100%)",
                   borderRadius: "18px",
                   border: "1px solid rgba(197, 160, 89, 0.4)",
                   maxWidth: "520px",
@@ -429,7 +429,7 @@ export default function InvitationCardSection({ weddingData }) {
                     fontSize: "0.92rem",
                     fontWeight: 700,
                     letterSpacing: "0.1em",
-                    color: "var(--color-emerald)",
+                    color: "var(--color-burgundy)",
                     marginBottom: "0.3rem",
                   }}
                 >
@@ -464,7 +464,7 @@ export default function InvitationCardSection({ weddingData }) {
                     borderTop: "1px dashed rgba(197, 160, 89, 0.4)",
                   }}
                 >
-                  <div style={{ fontFamily: "var(--font-serif-display)", fontSize: "1.15rem", fontWeight: 600, color: "var(--color-emerald)" }}>
+                  <div style={{ fontFamily: "var(--font-serif-display)", fontSize: "1.15rem", fontWeight: 600, color: "var(--color-burgundy)" }}>
                     {invitationCard.venueName}
                   </div>
                   <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: "var(--color-muted)", marginTop: "0.2rem" }}>
@@ -478,7 +478,7 @@ export default function InvitationCardSection({ weddingData }) {
                 <p style={{ fontFamily: "var(--font-serif-classic)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-muted)" }}>
                   Sharing the happiness:
                 </p>
-                <div style={{ fontFamily: "var(--font-script)", fontSize: "1.8rem", color: "var(--color-emerald)", marginTop: "0.1rem" }}>
+                <div style={{ fontFamily: "var(--font-script)", fontSize: "1.8rem", color: "var(--color-burgundy)", marginTop: "0.1rem" }}>
                   {invitationCard.sharingHappiness}
                 </div>
                 <div style={{ fontFamily: "var(--font-modern)", fontSize: "0.82rem", color: "var(--color-muted)", marginTop: "0.2rem" }}>
@@ -569,7 +569,7 @@ export default function InvitationCardSection({ weddingData }) {
               position: "fixed",
               inset: 0,
               zIndex: 10000,
-              backgroundColor: "rgba(7, 41, 31, 0.95)",
+              backgroundColor: "rgba(40, 12, 18, 0.95)",
               backdropFilter: "blur(18px)",
               WebkitBackdropFilter: "blur(18px)",
               display: "flex",

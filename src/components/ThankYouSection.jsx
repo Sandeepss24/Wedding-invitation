@@ -16,7 +16,7 @@ export default function ThankYouSection({ weddingData, onReplayGiftBox }) {
       style={{
         position: "relative",
         padding: "6rem 1.5rem 3rem",
-        background: "linear-gradient(180deg, #FDFBF7 0%, #F5ECE1 100%)",
+        background: "linear-gradient(180deg, #FDFBF7 0%, #F8F0E3 100%)",
         borderTop: "1px solid rgba(197, 160, 89, 0.25)",
         textAlign: "center",
         overflow: "hidden",
@@ -55,7 +55,7 @@ export default function ThankYouSection({ weddingData, onReplayGiftBox }) {
             justifyContent: "center",
             margin: "0 auto 1.8rem",
             background: "#FFF",
-            boxShadow: "0 6px 20px rgba(109, 27, 46, 0.08)",
+            boxShadow: "0 6px 20px rgba(112, 31, 43, 0.08)",
           }}
         >
           <span
@@ -110,7 +110,7 @@ export default function ThankYouSection({ weddingData, onReplayGiftBox }) {
             style={{
               fontFamily: "var(--font-arabic)",
               fontSize: "1.35rem",
-              color: "var(--color-emerald)",
+              color: "var(--color-burgundy)",
               direction: "rtl",
               marginBottom: "0.2rem",
             }}

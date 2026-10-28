@@ -39,7 +39,7 @@ export default function RSVPSection({ weddingData }) {
       style={{
         padding: "6rem 1.5rem",
         position: "relative",
-        background: "radial-gradient(at 50% 0%, rgba(233, 244, 238, 0.5) 0px, transparent 65%), var(--color-ivory)",
+        background: "radial-gradient(at 50% 0%, rgba(248, 240, 227, 0.75) 0px, transparent 65%), var(--color-ivory)",
       }}
     >
       <div className="container-custom" style={{ maxWidth: "680px" }}>
@@ -58,9 +58,9 @@ export default function RSVPSection({ weddingData }) {
                 display: "inline-block",
                 padding: "0.35rem 1.1rem",
                 borderRadius: "30px",
-                border: "1px solid rgba(13, 68, 51, 0.18)",
-                background: "rgba(233, 244, 238, 0.6)",
-                color: "var(--color-emerald)",
+                border: "1px solid rgba(112, 31, 43, 0.18)",
+                background: "rgba(248, 240, 227, 0.75)",
+                color: "var(--color-burgundy)",
                 fontSize: "0.78rem",
                 fontWeight: 600,
                 letterSpacing: "0.14em",
@@ -111,7 +111,7 @@ export default function RSVPSection({ weddingData }) {
             borderRadius: "28px",
             padding: "clamp(2.4rem, 5vw, 3.4rem)",
             background: "#FFFFFF",
-            boxShadow: "0 12px 35px -8px rgba(13, 68, 51, 0.07), 0 4px 16px rgba(197, 160, 89, 0.06)",
+            boxShadow: "0 12px 35px -8px rgba(112, 31, 43, 0.07), 0 4px 16px rgba(197, 160, 89, 0.06)",
             border: "1px solid rgba(197, 160, 89, 0.28)",
           }}
         >
@@ -147,12 +147,12 @@ export default function RSVPSection({ weddingData }) {
               onClick={() => handleChoice("attending")}
               className={`rsvp-button-card attending ${selectedChoice === "attending" ? "active" : ""}`}
               style={{
-                borderColor: selectedChoice === "attending" ? "var(--color-emerald)" : undefined,
-                background: selectedChoice === "attending" ? "rgba(233, 244, 238, 0.45)" : undefined,
+                borderColor: selectedChoice === "attending" ? "var(--color-burgundy)" : undefined,
+                background: selectedChoice === "attending" ? "rgba(248, 240, 227, 0.6)" : undefined,
               }}
               aria-label="Joyfully Accepts"
             >
-              <Heart size={26} fill="var(--color-emerald)" color="var(--color-emerald)" />
+              <Heart size={26} fill="var(--color-burgundy)" color="var(--color-burgundy)" />
               <span
                 style={{
                   fontFamily: "var(--font-serif-classic)",
@@ -228,7 +228,7 @@ export default function RSVPSection({ weddingData }) {
                 maxWidth: "500px",
                 width: "100%",
                 padding: "clamp(2rem, 5vw, 2.8rem)",
-                boxShadow: "0 25px 60px -15px rgba(7, 41, 31, 0.35)",
+                boxShadow: "0 25px 60px -15px rgba(74, 18, 26, 0.35)",
                 border: "1px solid rgba(197, 160, 89, 0.38)",
                 position: "relative",
                 textAlign: "center",
@@ -266,17 +266,17 @@ export default function RSVPSection({ weddingData }) {
                       width: "68px",
                       height: "68px",
                       borderRadius: "50%",
-                      background: "rgba(233, 244, 238, 0.85)",
-                      border: "2px solid var(--color-emerald)",
+                      background: "rgba(248, 240, 227, 0.9)",
+                      border: "2px solid var(--color-burgundy)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       margin: "0 auto 1.2rem",
-                      color: "var(--color-emerald)",
-                      boxShadow: "0 8px 20px rgba(13, 68, 51, 0.15)",
+                      color: "var(--color-burgundy)",
+                      boxShadow: "0 8px 20px rgba(112, 31, 43, 0.15)",
                     }}
                   >
-                    <Heart size={32} fill="var(--color-emerald)" color="var(--color-emerald)" />
+                    <Heart size={32} fill="var(--color-burgundy)" color="var(--color-burgundy)" />
                   </div>
 
                   <span
@@ -285,8 +285,8 @@ export default function RSVPSection({ weddingData }) {
                       fontWeight: 600,
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
-                      color: "var(--color-emerald)",
-                      background: "rgba(233, 244, 238, 0.75)",
+                      color: "var(--color-burgundy)",
+                      background: "rgba(248, 240, 227, 0.85)",
                       padding: "0.3rem 0.9rem",
                       borderRadius: "20px",
                       display: "inline-block",
@@ -300,7 +300,7 @@ export default function RSVPSection({ weddingData }) {
                     style={{
                       fontFamily: "var(--font-serif-display)",
                       fontSize: "clamp(1.7rem, 4vw, 2.1rem)",
-                      color: "var(--color-emerald-dark)",
+                      color: "var(--color-burgundy-dark)",
                       marginBottom: "0.8rem",
                       lineHeight: 1.2,
                     }}

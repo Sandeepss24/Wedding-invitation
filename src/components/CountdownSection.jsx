@@ -130,7 +130,7 @@ export default function CountdownSection({ weddingData }) {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  boxShadow: "0 10px 25px rgba(13, 68, 51, 0.06)",
+                  boxShadow: "0 10px 25px rgba(112, 31, 43, 0.06)",
                 }}
               >
                 <span
@@ -201,7 +201,7 @@ export default function CountdownSection({ weddingData }) {
             rel="noopener noreferrer"
             className="btn-secondary"
             style={{
-              boxShadow: "0 4px 14px rgba(109, 27, 46, 0.06)",
+              boxShadow: "0 4px 14px rgba(112, 31, 43, 0.06)",
             }}
           >
             <Calendar size={16} />

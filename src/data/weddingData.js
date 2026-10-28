@@ -31,12 +31,15 @@ export const weddingData = {
       post: "Madavana, Panangad P O, Ernakulam",
       initial: "J",
     },
-    namesCombined: "Mohammed Nishad & Jumeena",
-    namesShort: "Nishad & Jumeena",
-    monogram: "N & J",
+    namesCombined: "Jumeena & Mohammed Nishad",
+    namesShort: "Jumeena & Nishad",
+    monogram: "J & N",
     hashtag: "#NishadWedsJumeena",
-    announcementHeading: "THE SACRED NIKKAH & WEDDING",
+    announcementHeading: "NIKAH INVITATION",
     subtitle: "Two souls united by faith, boundless love, and the endless blessings of Allah.",
+    invitationPlea:
+      "With the blessings of Almighty Allah and of our beloved families, Jumeena & Nishad invite you to the Nikah that joins them in marriage.",
+    invitationClosing: "Your presence and your du'a would make our day complete.",
     quote: "And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy.",
     quoteAuthor: "Surah Ar-Rum (30:21)",
     duaArabic: "بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
@@ -49,7 +52,7 @@ export const weddingData = {
   schedule: {
     // Configurable countdown target date: Nov 20, 2026
     countdownTarget: "2026-11-22T11:00:00",
-    weddingDateDisplay: "November 22 – 22, 2026",
+    weddingDateDisplay: "November 22, 2026",
     mainMarriageDate: "Sunday, November 22, 2026",
     nikkahDate: "Sunday, November 22, 2026",
     nikkahTime: "11:00 AM",
@@ -91,7 +94,7 @@ export const weddingData = {
     {
       year: "2026",
       title: "The Auspicious Wedding & Nikkah",
-      date: "November 20 – 22, 2026",
+      date: "November 22, 2026",
       location: "Nettoor Mahallu Auditorium",
       description:
         "Sealing our lifelong covenant before Allah (SWT) and our cherished family and friends, stepping hand in hand into a future filled with peace, devotion, and shared dreams.",
@@ -126,7 +129,7 @@ export const weddingData = {
       time: "05:00 PM Onwards",
       venueName: "Nettoor Mahallu Auditorium",
       address: "Nettoor-Madavana Road, Nettoor, Maradu, Ernakulam",
-      dressCode: "Festive Emerald, Mustard & Traditional Silk",
+      dressCode: "Festive Burgundy, Cream & Traditional Silk",
       description:
         "An enchanting evening filled with fragrant henna artistry, soulful melodies, sweet delicacies, and warm celebration under festive lantern lights.",
       image: "/images/wedding-3.jpg",
