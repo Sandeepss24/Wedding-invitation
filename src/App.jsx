@@ -64,10 +64,10 @@ export default function App() {
             <CountdownSection weddingData={weddingData} />
 
             {/* Section 4: Wedding Events Itinerary */}
-            <EventsSection weddingData={weddingData} />
+            {/* <EventsSection weddingData={weddingData} /> */}
 
             {/* Section 5: Editorial Couple Gallery */}
-            <GallerySection weddingData={weddingData} />
+            {/* <GallerySection weddingData={weddingData} /> */}
 
             {/* Section 6: Digital Royal Invitation Card */}
             <InvitationCardSection weddingData={weddingData} />

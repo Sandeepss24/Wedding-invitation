@@ -70,9 +70,9 @@ export const weddingData = {
 
   storyMilestones: [
     {
-      year: "2022",
+      // year: "2022",
       title: "Written in the Stars (Qadr)",
-      date: "September 14, 2022",
+      // date: "September 14, 2022",
       location: "Kochi, Kerala",
       description:
         "What began as a quiet family introduction blossomed into effortless laughter, shared values, and deep mutual respect. Over aromatic coffee and jasmine blooms, two hearts quietly recognized their destiny.",
@@ -81,9 +81,9 @@ export const weddingData = {
       objectPosition: "center 12%",
     },
     {
-      year: "2024",
+      // year: "2024",
       title: "The Golden Promise",
-      date: "May 20, 2024",
+      // date: "May 20, 2024",
       location: "Ernakulam, Kerala",
       description:
         "Under a canopy of glowing lights and twilight skies, with both families offering heartfelt Duas and tears of joy, Nishad asked Jumeena to walk this life beside him. Alhamdulillah, the answer was yes.",
