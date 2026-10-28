@@ -370,7 +370,7 @@
 }
 
 .lid-rim.front {
-  width: 182px;
+  width: 144px;
   height: 25px;
   bottom: -25px;
   left: 0;
@@ -380,7 +380,7 @@
 }
 
 .lid-rim.back {
-  width: 182px;
+  width: 144px;
   height: 25px;
   top: -25px;
   left: 0;
@@ -391,7 +391,7 @@
 
 .lid-rim.left {
   width: 25px;
-  height: 182px;
+  height: 146px;
   top: 0;
   left: -25px;
   transform-origin: right;
@@ -401,7 +401,7 @@
 
 .lid-rim.right {
   width: 25px;
-  height: 182px;
+  height: 146px;
   top: 0;
   right: -25px;
   transform-origin: left;
@@ -552,7 +552,7 @@
     height: 100vh;
     height: 100svh;
     height: 100dvh;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .gift-text-top {
