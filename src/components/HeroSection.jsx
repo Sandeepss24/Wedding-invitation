@@ -469,8 +469,8 @@ export default function HeroSection({ weddingData }) {
             padding: 0 0.5rem !important;
           }
           .hero-invitation-plea {
-            font-size: 1.14rem !important;
-            line-height: 1.58 !important;
+            font-size: 1.24rem !important;
+            line-height: 1.88 !important;
             margin-bottom: 0.85rem !important;
           }
           .hero-invitation-closing {

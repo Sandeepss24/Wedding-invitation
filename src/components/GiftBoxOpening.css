@@ -30,7 +30,7 @@
 .gift-scene-texture {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 65%),
     radial-gradient(circle at 15% 20%, rgba(145, 46, 59, 0.12) 0%, transparent 40%),
     radial-gradient(circle at 85% 80%, rgba(112, 31, 43, 0.1) 0%, transparent 45%);
@@ -189,9 +189,17 @@
 }
 
 @keyframes boxBounce {
-  0% { transform: rotateX(-18deg) rotateY(32deg) scale(1); }
-  50% { transform: rotateX(-12deg) rotateY(28deg) translateY(-14px) scale(1.06); }
-  100% { transform: rotateX(-18deg) rotateY(32deg) translateY(0) scale(1.02); }
+  0% {
+    transform: rotateX(-18deg) rotateY(32deg) scale(1);
+  }
+
+  50% {
+    transform: rotateX(-12deg) rotateY(28deg) translateY(-14px) scale(1.06);
+  }
+
+  100% {
+    transform: rotateX(-18deg) rotateY(32deg) translateY(0) scale(1.02);
+  }
 }
 
 /* Box Base and Faces */
@@ -213,11 +221,30 @@
   overflow: hidden;
 }
 
-.box-face.front  { transform: translateZ(85px); }
-.box-face.back   { transform: rotateY(180deg) translateZ(85px); background: #EFE4D4; }
-.box-face.right  { transform: rotateY(90deg) translateZ(85px); background: #F3E6D4; }
-.box-face.left   { transform: rotateY(-90deg) translateZ(85px); background: #FAF2E6; }
-.box-face.bottom { transform: rotateX(-90deg) translateZ(85px); background: #E6D9C5; }
+.box-face.front {
+  transform: translateZ(85px);
+}
+
+.box-face.back {
+  transform: rotateY(180deg) translateZ(85px);
+  background: #EFE4D4;
+}
+
+.box-face.right {
+  transform: rotateY(90deg) translateZ(85px);
+  background: #F3E6D4;
+}
+
+.box-face.left {
+  transform: rotateY(-90deg) translateZ(85px);
+  background: #FAF2E6;
+}
+
+.box-face.bottom {
+  transform: rotateX(-90deg) translateZ(85px);
+  background: #E6D9C5;
+}
+
 .box-face.top-inside {
   transform: rotateX(90deg) translateZ(85px);
   background: radial-gradient(circle at 50% 50%, #FFEAB8 20%, #D4AF37 70%, #701F2B 100%);
@@ -346,6 +373,7 @@
   transform: rotateX(-90deg);
   background: #E8D8C2;
 }
+
 .lid-rim.back {
   width: 182px;
   height: 25px;
@@ -355,6 +383,7 @@
   transform: rotateX(90deg);
   background: #DFD0B4;
 }
+
 .lid-rim.left {
   width: 25px;
   height: 182px;
@@ -364,6 +393,7 @@
   transform: rotateY(-90deg);
   background: #EFE4D2;
 }
+
 .lid-rim.right {
   width: 25px;
   height: 182px;
@@ -442,10 +472,13 @@
 }
 
 @keyframes floatSparkle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(0.8) rotate(0deg);
     opacity: 0.3;
   }
+
   50% {
     transform: translateY(-16px) scale(1.2) rotate(45deg);
     opacity: 0.95;
@@ -496,9 +529,12 @@
 }
 
 @keyframes pulseCta {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 8px 24px rgba(112, 31, 43, 0.25), 0 0 0 0 rgba(212, 175, 55, 0.4);
   }
+
   50% {
     box-shadow: 0 12px 30px rgba(112, 31, 43, 0.35), 0 0 0 12px rgba(212, 175, 55, 0);
   }
@@ -506,27 +542,49 @@
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
-  .gift-box-scene {
-    padding: 1.5rem 1rem 2rem;
-  }
+  /* .gift-box-scene {
+    padding: .5rem 1rem .5rem;
+  } */
+
   .gift-box-viewport {
     width: 220px;
     height: 220px;
   }
+
   .gift-box-3d {
     width: 135px;
     height: 135px;
   }
+
   .box-face {
     width: 135px;
     height: 135px;
   }
-  .box-face.front  { transform: translateZ(67.5px); }
-  .box-face.back   { transform: rotateY(180deg) translateZ(67.5px); }
-  .box-face.right  { transform: rotateY(90deg) translateZ(67.5px); }
-  .box-face.left   { transform: rotateY(-90deg) translateZ(67.5px); }
-  .box-face.bottom { transform: rotateX(-90deg) translateZ(67.5px); }
-  .box-face.top-inside { transform: rotateX(90deg) translateZ(67.5px); }
+
+  .box-face.front {
+    transform: translateZ(67.5px);
+  }
+
+  .box-face.back {
+    transform: rotateY(180deg) translateZ(67.5px);
+  }
+
+  .box-face.right {
+    transform: rotateY(90deg) translateZ(67.5px);
+  }
+
+  .box-face.left {
+    transform: rotateY(-90deg) translateZ(67.5px);
+  }
+
+  .box-face.bottom {
+    transform: rotateX(-90deg) translateZ(67.5px);
+  }
+
+  .box-face.top-inside {
+    transform: rotateX(90deg) translateZ(67.5px);
+  }
+
   .box-lid-assembly {
     width: 146px;
     height: 146px;
@@ -534,15 +592,19 @@
     left: -5px;
     transform: translateZ(70px);
   }
+
   .lid-face-top {
     width: 146px;
     height: 146px;
   }
+
   .box-bow-container {
     width: 90px;
     height: 90px;
   }
-  .bow-loop-left, .bow-loop-right {
+
+  .bow-loop-left,
+  .bow-loop-right {
     width: 40px;
     height: 30px;
   }
