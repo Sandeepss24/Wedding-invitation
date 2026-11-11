@@ -236,9 +236,9 @@ export const weddingData = {
   },
 
   music: {
-    title: "Meeladun Saeed",
-    artist: "Firdhous Kaliyaroad",
-    src: "/audio/meeladun-saeed.mp3",
+    title: "Shukran Allah",
+    artist: "Sonu Nigam & Shreya Ghoshal (Kurbaan)",
+    src: "/audio/shukran-allah.mp3",
   },
 };
 

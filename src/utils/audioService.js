@@ -1,6 +1,6 @@
 /**
  * Audio Service for Romantic Wedding Experience
- * Plays "Meeladun Saeed" by Firdhous Kaliyaroad with interactive Web Audio sound effects.
+ * Plays "Shukran Allah" (Kurbaan) by Sonu Nigam & Shreya Ghoshal with interactive Web Audio sound effects.
  */
 
 class WeddingAudioService {
@@ -28,12 +28,12 @@ class WeddingAudioService {
       this.ctx.resume().catch(() => {});
     }
 
-    // 2. HTML5 Audio Element for "Meeladun Saeed"
+    // 2. HTML5 Audio Element for "Shukran Allah"
     if (!this.bgAudio && typeof window !== "undefined") {
       try {
         this.bgAudio = new Audio();
         const canPlayMp3 = this.bgAudio.canPlayType("audio/mpeg");
-        this.bgAudio.src = canPlayMp3 ? "/audio/meeladun-saeed.mp3" : "/audio/meeladun-saeed.m4a";
+        this.bgAudio.src = canPlayMp3 ? "/audio/shukran-allah.mp3" : "/audio/shukran-allah.m4a";
         this.bgAudio.loop = true;
         this.bgAudio.preload = "auto";
         this.bgAudio.volume = 0;
@@ -162,7 +162,7 @@ class WeddingAudioService {
     this.playSparkle();
   }
 
-  // Background Nasheed: "Meeladun Saeed"
+  // Background Romantic Song: "Shukran Allah"
   toggleAmbientMusic(enable) {
     if (enable) {
       this.startAmbientMusic();
