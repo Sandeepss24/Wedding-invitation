@@ -159,7 +159,7 @@ export default function InvitationCardSection({ weddingData }) {
               title="Click to view full size"
             >
               <img
-                src={invitationCard.cardImage || "/images/invitation-card.jpg"}
+                src={invitationCard.cardImage || "/images/invitation-card.jpeg"}
                 alt={`${couple.namesCombined} Wedding Invitation Card`}
                 style={{
                   width: "100%",
@@ -525,7 +525,7 @@ export default function InvitationCardSection({ weddingData }) {
 
           {/* Download Original Card */}
           <a
-            href={invitationCard.cardImage || "/images/invitation-card.jpg"}
+            href={invitationCard.cardImage || "/images/invitation-card.jpeg"}
             download="Nishad_Jumeena_Wedding_Invitation.jpg"
             className="btn-secondary"
             style={{ fontSize: "0.85rem", padding: "0.75rem 1.3rem" }}
@@ -620,7 +620,7 @@ export default function InvitationCardSection({ weddingData }) {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={invitationCard.cardImage || "/images/invitation-card.jpg"}
+                src={invitationCard.cardImage || "/images/invitation-card.jpeg"}
                 alt="Full Wedding Invitation Card"
                 style={{
                   width: "100%",

@@ -51,11 +51,11 @@ export const weddingData = {
 
   schedule: {
     // Configurable countdown target date: Nov 20, 2026
-    countdownTarget: "2026-11-22T11:00:00",
+    countdownTarget: "2026-11-22T11:30:00",
     weddingDateDisplay: "November 22, 2026",
     mainMarriageDate: "Sunday, November 22, 2026",
     nikkahDate: "Sunday, November 22, 2026",
-    nikkahTime: "11:00 AM",
+    nikkahTime: "11:30 AM",
     hijriDate: "12 Jumadil Akhir 1448",
     locationDisplay: "Nettoor Mahallu Auditorium, Maradu, Ernakulam",
   },
@@ -142,7 +142,7 @@ export const weddingData = {
       name: "The Sacred Nikkah Ceremony",
       arabicName: "عقد النكاح المبارك",
       date: "Sunday, November 22, 2026",
-      time: "11:00 AM (12 Jumadil Akhir 1448)",
+      time: "11:30 AM (12 Jumadil Akhir 1448)",
       venueName: "Nettoor Mahallu Auditorium",
       address: "Nettoor-Madavana Road, Nettoor, Maradu, Ernakulam",
       dressCode: "Regal Traditional Ivory, Champagne & Gold",
@@ -187,7 +187,7 @@ export const weddingData = {
       id: 4,
       title: "The Auspicious Invitation Card",
       caption: "The official wedding invitation card blessed in the name of Allah.",
-      image: "/images/invitation-card.jpg",
+      image: "/images/invitation-card.jpeg",
       category: "Keepsake",
       aspect: "portrait",
       objectPosition: "center top",
@@ -211,7 +211,7 @@ export const weddingData = {
   ],
 
   invitationCard: {
-    cardImage: "/images/invitation-card.jpg",
+    cardImage: "/images/invitation-card.jpeg",
     bismillahArabic: "بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
     bismillahEnglish: "In The Name Of Allah",
     inshaAllah: "Insha Allah",
@@ -223,7 +223,7 @@ export const weddingData = {
     groomName: "Nishad",
     parentsGroom: "Mr. Muhammed Nizar C M & Mrs. Shaffeera K M",
     parentsGroomHouse: "Thekkeveettil Parambil House, Nettoor P O, Maradu, Ernakulam",
-    nikkahTime: "Nikkah: 11:00 AM",
+    nikkahTime: "Nikkah: 11:30 AM",
     ceremonyDate: "SUNDAY 22 | NOVEMBER | 2026",
     hijriDate: "(12 Jumadil Akhir 1448)",
     marriageDateNote: "Marriage Celebrations commence Sunday, November 22, 2026",
